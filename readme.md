@@ -18,7 +18,7 @@ Previous R packages, such as *tseries* or *randtests* test for randomness by exa
 Make sure you install R's *devtools* and have the necessary dependencies (different between OS X and Windows) prior to using *runstest*. Then, type the following into the R console:
 
 ```r
-devtools::install_github("https://github.com/vc1492a/runstest-R")
+devtools::install_github("vc1492a/runstest-R")
 ```
 
 ### coming soon
