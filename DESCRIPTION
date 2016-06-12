@@ -1,0 +1,14 @@
+Package: runstest
+Type: Package
+Title: runstest: a test for autocorrelation in residuals
+Version: 0.1
+Date: 2016-06-11
+Author: Valentino Constantinou
+Maintainer: <vc@valentino.io>
+Description: An implementation of the runs test (Wald-Wolfowitz test) in R.
+    Accepts a linear regression model as input and tests whether autocorrelation
+    is present in the residuals, which is useful for time series models. The
+    result of the test displays the expected runs, the actual number of runs, and
+    whether autocorrelation is likely.
+License: MIT
+RoxygenNote: 5.0.1
