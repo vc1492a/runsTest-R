@@ -26,8 +26,3 @@ devtools::install_github("vc1492a/runstest-R")
 ### coming soon
 
 I am working towards publishing this package on CRAN for easy downloading and updating. 
-
-### changelog 
-
-- 0.2.0: ability to plot an index vs. residuals plot using ggplot2 for manual inspection
-- 0.1.0: conduct the runs test for linear regression models
