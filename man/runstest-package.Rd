@@ -21,4 +21,5 @@ Tamhane, Ajit. "4.6.1: Tests for Independence." Predictive Analytics (I): Parame
 data(example)
 linreg <- lm(H ~ P, data=example) 
 runsTest(linreg)
+runsTest(linreg, plot=TRUE)
 }

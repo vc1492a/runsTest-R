@@ -1,7 +1,7 @@
 Package: runstest
 Type: Package
 Title: runstest: a test for autocorrelation in residuals
-Version: 0.1
+Version: 0.2.0
 Date: 2016-06-11
 Author: Valentino Constantinou
 Maintainer: <vc@valentino.io>
@@ -12,3 +12,4 @@ Description: An implementation of the runs test (Wald-Wolfowitz test) in R.
     whether autocorrelation is likely.
 License: MIT
 RoxygenNote: 5.0.1
+Imports: ggplot2

@@ -23,14 +23,4 @@ runsTest(linreg)
 # independence of the elements may be rejected. The result shows that autocorrelation is likely. 
 
 # a plot of the residuals also shows that autocorrelation is likely
-library(ggplot2)
-indexResidPlot <- function(model) {
-  p1<-ggplot(model, aes(c(1:25), .resid)) + geom_point()
-  p1<-p1+stat_smooth(method="loess") + geom_hline(yintercept=0, col="red", linetype="dashed")
-  p1<-p1+xlab("Index") + ylab("Residuals")
-  p1<-p1+ggtitle("Index vs Residuals Plot") + theme_bw()
-  
-  return(list(rvfPlot=p1))
-}
-
-print(indexResidPlot(linreg))
+runsTest(linreg, plot=TRUE)

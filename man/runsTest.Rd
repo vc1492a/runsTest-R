@@ -10,15 +10,14 @@ runsTest(model)
 \item{model}{A linear regression model specified using base R lm.}
 }
 \value{
-Prints the number of expected runs, number of actual runs, and whether autocorrelation is likely.
+Prints the number of expected runs, number of actual runs, and whether autocorrelation is likely. If plot=TRUE, shows an index vs. residuals plot using ggplot2. 
 }
 \description{
-Examines model residuals for the presence of autocorrelation.
+Examines model residuals for the presence of autocorrelation. Use plot=TRUE to show an index vs. residuals plot.
 }
 \examples{
 data(example)
 linreg <- lm(H ~ P, data=example) 
 runsTest(linreg)
-
+runsTest(linreg, plot=TRUE)
 }
-

@@ -7,6 +7,8 @@ library(runstest)
 data(example)
 linreg <- lm(H ~ P, data=example) 
 runsTest(linreg)
+# to show an index vs. residuals plot, use:
+runsTest(linreg, plot=TRUE)
 ```
 
 You must specify the function and a linear model first prior to applying the function. See *example/example.R* for more detailed information and instructions.  
@@ -24,3 +26,8 @@ devtools::install_github("vc1492a/runstest-R")
 ### coming soon
 
 I am working towards publishing this package on CRAN for easy downloading and updating. 
+
+### changelog 
+
+- 0.2.0: ability to plot an index vs. residuals plot using ggplot2 for manual inspection
+- 0.1.0: conduct the runs test for linear regression models

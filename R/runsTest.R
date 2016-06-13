@@ -26,7 +26,7 @@
 #' linreg <- lm(H ~ P, data=example) 
 #' runsTest(linreg)
 #' 
-runsTest <- function(model) {
+runsTest <- function(model, plot) {
   n1 = sum(resid(model) > 0) # number of positive residuals
   n2 = sum(resid(model) < 0) # number of negative residuals
   u = ((2*n1*n2) / (n1+n2)) + 1 # expected number of runs
@@ -52,5 +52,16 @@ runsTest <- function(model) {
   }
   else {
     print("autocorrelation is not likely")
+  }
+  if (missing(plot)) {
+    print('To plot, use plot=TRUE')
+  }
+  else {
+    residlength = length(resid(model))
+    p1 <- ggplot2::ggplot(model, ggplot2::aes(c(1:residlength), .resid)) + ggplot2::geom_point()
+    p1 <- p1 + ggplot2::stat_smooth(method="loess") + ggplot2::geom_hline(yintercept=0, col="red", linetype="dashed")
+    p1 <- p1 + ggplot2::xlab("Index") + ggplot2::ylab("Residuals")
+    p1 <- p1 + ggplot2::ggtitle("Index vs Residuals Plot") + ggplot2::theme_bw()
+    print(p1)
   }
 }
